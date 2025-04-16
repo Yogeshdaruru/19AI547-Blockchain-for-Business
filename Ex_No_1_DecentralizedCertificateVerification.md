@@ -10,24 +10,49 @@
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
+
 contract CertificateVerification {
-address public university;
-mapping(bytes32 => bool) public certificates; // Store hashed certificates
+ address public university; // university address
+ // Mapping to store issued certficate hashes
+mapping(bytes32 => bool) public certificates; 
+
+//event emitted when a certificate is issued
 event CertificateIssued(bytes32 indexed certHash);
+
+//construtor sets the deployer (university)
 constructor() {
-university = msg.sender; // University deploys the contract
+university = msg.sender; 
 }
-function issueCertificate(string memory studentName, string memory degree, uint256 year) public {
-require(msg.sender == university, "Only university can issue certificates");
-bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
-certificates[certHash] = true;
-emit CertificateIssued(certHash);
-}
-function verifyCertificate(string memory studentName, string memory degree, uint256 year) public view returns (bool) {
-bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
-return certificates[certHash];
-}
-}
+
+       //function to issue certificate (only university can call)
+       function issueCertificate(string memory studentName, string memory degree, uint256 year) public {
+           require(msg.sender == university, "Only university can issue certificates");
+
+       // create a unique hash of te certificate details
+       bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
+
+       certificates[certHash] = true;
+       emit CertificateIssued(certHash);
+   }
+
+   // Function to verify if a certificate exists
+   function verifyCertificate(string memory studentName, string memory degree, uint256 year) public view returns (bool) {
+
+       // create a unique hash of te certificate details
+       bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
+
+       certificates[certHash] = true;
+       emit CertificateIssued(certHash);
+   }
+
+   // Function to verify if a certificate exists
+   function verifyCertificate(string memory studentName, string memory degree, uint256 year) public view returns (bool) {
+      bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
+
+      bytes32 certHash = keccak256(abi.encodePacked(studentName, degree, year));
+      return certificates[certHash];
+   }
+}  
 ```
 # Expected Output:
 ```
@@ -40,4 +65,6 @@ High-Level Overview:
 ● Shows how blockchain can be used in education and credential verification.
 ```
 # Result:
+![Screenshot (65)](https://github.com/user-attachments/assets/a08336f6-f274-4d0f-a01c-0dc3c4011d90)
+![Screenshot (64)](https://github.com/user-attachments/assets/ac6c6da9-5997-41f2-8e3a-dac28e47f40b)
 
