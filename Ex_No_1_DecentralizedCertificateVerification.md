@@ -55,7 +55,7 @@ university = msg.sender;
 }  
 ```
 # Expected Output:
-```![Screenshot (71)](https://github.com/user-attachments/assets/85a01d95-9361-434b-af7c-493b6a0ab0ab)
+![Screenshot (71)](https://github.com/user-attachments/assets/85a01d95-9361-434b-af7c-493b6a0ab0ab)
 
 ● When the university issues a certificate, it gets stored as a hash.
 ● A student or employer can verify the certificate by entering the details.
@@ -64,6 +64,5 @@ High-Level Overview:
 ● Used to prevent fake certificates.
 ● Enables quick verification by employers or other institutions.
 ● Shows how blockchain can be used in education and credential verification.
-```
 # Result:
 The certificate is correct if its hash matches the one stored on the blockchain, and it is not revoked or expired.
