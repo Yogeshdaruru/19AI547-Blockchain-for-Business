@@ -61,6 +61,8 @@ contract Crowdfunding {
 }
 ```
 # Expected Output:
+![Screenshot (68)](https://github.com/user-attachments/assets/39307c09-0fa3-4f3a-8770-364f8bcfcb92)
+
 Users can contribute ETH to the campaign.
 
 
@@ -77,3 +79,4 @@ Teaches decentralized fundraising.
 Avoids fraud by ensuring funds are only transferred if the goal is met.
 
 # RESULT: 
+The result shows whether the campaign succeeded (funds go to creator) or failed (backers get refunds), with all actions transparently recorded on the blockchain.
