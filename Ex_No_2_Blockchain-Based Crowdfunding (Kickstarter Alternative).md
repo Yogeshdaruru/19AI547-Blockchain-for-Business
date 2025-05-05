@@ -61,17 +61,15 @@ contract Crowdfunding {
 }
 ```
 # Expected Output:
-![Screenshot (68)](https://github.com/user-attachments/assets/39307c09-0fa3-4f3a-8770-364f8bcfcb92)
 
 Users can contribute ETH to the campaign.
-
+![Screenshot 2025-05-05 133208](https://github.com/user-attachments/assets/3df90c22-688c-4d4c-8d03-3ab9fd008431)
 
 If the goal is met, the creator can withdraw funds.
-
+![Screenshot 2025-05-05 133523](https://github.com/user-attachments/assets/db9734ca-0670-4d08-83c9-017572aac3e1)
 
 If the goal is not met, contributors can claim a refund.
-
-
+![Screenshot 2025-05-05 133609](https://github.com/user-attachments/assets/19f2302d-1525-43c7-a28a-8cc13bc01da7)
 # High-Level Overview:
 Teaches decentralized fundraising.
 
